@@ -1,0 +1,13 @@
+{
+  "name": "parcel-start",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel public/index.html --open",
+    "build": "parcel build public/index.html"
+  },
+  "author": "Eugene Egorov",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.34.0"
+  }
+}

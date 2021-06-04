@@ -2,12 +2,44 @@
   "name": "parcel-start",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel public/index.html --open",
-    "build": "parcel build public/index.html"
+    "cleanup": "rimraf .cache dist",
+    "dev": "npm run cleanup && parcel src/index.html --open",
+    "build:parcel": "parcel build src/index.html --public-url ./",
+    "build": "npm run cleanup && npm run build:parcel"
   },
   "author": "Eugene Egorov",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-custom-dist-structure": "^1.1.18",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "rimraf": "^2.7.1",
     "sass": "^1.34.0"
+  },
+  "dependencies": {
+    "file-system": "^2.2.2"
+  },
+  "customDistStructure": {
+    "config": {
+      ".js": "assets/js",
+      ".js.map": "assets/js",
+      "assets/fonts": [
+        ".eot",
+        ".svg",
+        ".woff2",
+        ".woff",
+        ".otf",
+        ".ttf"
+      ],
+      "assets/img": [
+        ".jpg",
+        ".png"
+      ],
+      ".css": "assets/css",
+      ".css.map": "assets/css"
+
+    },
+    "options": {
+      "development": true
+    }
   }
 }

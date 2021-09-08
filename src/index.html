@@ -5,13 +5,38 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <link rel="stylesheet" type="text/css" href="./fonts.css" />-->
+    <!--    <link rel="stylesheet" type="text/css" href="./fonts.css" />-->
     <title>Good service</title>
 </head>
 <body>
 
 <div id="root">
-    Hello
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <div class="select">
+        <input class="select__input" type="hidden" name="">
+        <div class="select__head">
+            <img class="icon"
+                 src="https://www.1ci.com/local/templates/1ci/i/icons/Flag/global.svg"
+                 alt="global">Global | English
+        </div>
+        <ul class="select__list" style="display: none;">
+            <li class="select__item global">
+                <a href="https://support.1ci.com/hc/en-us/categories/360002752960">
+                    <img class="icon"
+                         src="https://www.1ci.com/local/templates/1ci/i/icons/Flag/global.svg"
+                         alt="global">Global | English
+                </a>
+            </li>
+            <li class="select__item turkey">
+                <a href="https://support.1ci.com/hc/tr/categories/360002752960">
+                    <img class="icon"
+                         src="https://www.1ci.com/local/templates/1ci/i/icons/Flag/Turkey.svg"
+                         alt="turkey">Turkey | Türkçe
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script src="js/index.js"></script>

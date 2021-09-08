@@ -36,7 +36,6 @@
       ],
       ".css": "assets/css",
       ".css.map": "assets/css"
-
     },
     "options": {
       "development": true
